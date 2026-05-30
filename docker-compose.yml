@@ -1,0 +1,9 @@
+services:
+  ragons-ai:
+    build: .
+    ports:
+      - "8787:8787"
+    volumes:
+      - ./data:/app/data
+      - ./sessions:/app/sessions
+    restart: always

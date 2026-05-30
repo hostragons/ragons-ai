@@ -1,20 +1,31 @@
 {
-  "name": "ai-cli",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "ragons-ai",
+  "version": "0.1.0-alpha",
+  "description": "Professional web-based dashboard for managing AI CLIs like Claude Code, Gemini, and OpenAI Codex with persistent PTY sessions.",
+  "main": "server.js",
   "scripts": {
-    "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "node --check server.js && node -e 'require(\"./db\"); console.log(\"DB Health Check Passed\")'",
+    "lint": "eslint ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "ai",
+    "cli",
+    "claude-code",
+    "terminal",
+    "dashboard",
+    "pty",
+    "xtermjs",
+    "developer-tools",
+    "hostragons"
+  ],
+  "author": "Hostragons <info@hostragons.com>",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "better-sqlite3": "^12.10.0",
     "cookie-parser": "^1.4.7",
-    "dotenv": "^17.4.2",
+    "dotenv": "^16.4.7",
     "express": "^5.2.1",
     "express-session": "^1.19.0",
     "multer": "^2.1.1",
@@ -22,6 +33,6 @@
     "ws": "^8.21.0"
   },
   "devDependencies": {
-    "eslint": "^10.4.1"
+    "eslint": "^9.0.0"
   }
 }
